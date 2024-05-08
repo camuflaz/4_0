@@ -20,22 +20,24 @@ class Main {
         case 1:
           System.out.println("Podaj imie studenta:");
           String imie = scanner.next();
+          System.out.println("Podaj nazwisko studenta");
+          String nazwisko = scanner.next();
           System.out.println("Podaj wiek:");
           int wiek = scanner.nextInt();
-          s.addStudent(new Student(imie, wiek));
+          s.addStudent(new Student(imie, nazwisko, wiek));
           break;
         case 2:
-          
+          var students = s.getStudents();
+          for(Student current : students) {
+            System.out.println(current.ToString());
+          }
           break;
         case 3:
           break;
         case 4:
           break;
       }
-      var students = s.getStudents();
-      for(Student current : students) {
-        System.out.println(current.ToString());
-      }
+
     } catch (IOException e) {
 
     }
