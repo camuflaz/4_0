@@ -30,7 +30,22 @@ public class Service {
     return ret;
   }
 
-  public Student findStudentByName(String name) {
+  public Student addStudent(String name, String surname, int age){
+          
+  }
+
+  public Student findStudentByName(String surname) {
+    /*Scanner scanner = new Scanner(System.in);
+    new FileReader("db.txt");
+    while(scanner.hasNextLine()){
+         if(surname.equals(scanner.nextLine().trim())){
+            System.out.println(scanner.nextLine());
+            break;
+          }else{
+           System.out.println("Nie ma takiego studenta");
+
+          }
+     }*/
     return null;
   }
 }

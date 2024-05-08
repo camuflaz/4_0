@@ -14,7 +14,7 @@ class Main {
     try {
       Scanner scanner = new Scanner(System.in);
       Service s = new Service();
-      System.out.println("1 - Dodawanie studenta 2 - Wyswietlanie informacji 3 - Usuwanie                 studentow z listy 4 - Wyjscie");
+      System.out.println("1 - Dodawanie studenta 2 - Wyswietlanie informacji 3 - Wyszukiwanie studenta po nazwisku 4 - Wyjscie");
       int wybor = scanner.nextInt();
       switch(wybor){
         case 1:
@@ -35,7 +35,9 @@ class Main {
         case 3:
           break;
         case 4:
+          System.exit(0);
           break;
+          
       }
 
     } catch (IOException e) {
