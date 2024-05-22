@@ -24,7 +24,9 @@ class Main {
           String nazwisko = scanner.next();
           System.out.println("Podaj wiek:");
           int wiek = scanner.nextInt();
-          s.addStudent(new Student(imie, nazwisko, wiek));
+          System.out.println("Podaj date urodzenia(ciag znakow...): ");
+          String data = scanner.next();
+          s.addStudent(new Student(imie, nazwisko, wiek,data));
           break;
         case 2:
           var students = s.getStudents();
