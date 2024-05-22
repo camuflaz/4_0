@@ -32,25 +32,26 @@ public class Service {
     return ret;
   }
 
-  public Student addStudent(String name, String surname, int age, String data){
+  public Student addStudent(String name, String surname, int age, int datad, int datam, int datar){
           return null;
   }
 
   public Student findStudentByName(String surname) {
-        try {
-          FileReader file = new FileReader("db.txt");
-          BufferedReader br = new BufferedReader(file);
-          String line;
-          while ((line = br.readLine()) != null) {
-              Student student = Student.Parse(line);
-              if (student.getSurname().equalsIgnoreCase(surname)) {
-                  return student;
-              }
+    try {
+      var file = new FileReader("db.txt");
+      var br = new BufferedReader(file);
+      String line;
+      while ((line = br.readLine()) != null) {
+          Student student = Student.Parse(line);
+          if (student.GetSurname().equalsIgnoreCase(surname)) {
+              return student;
           }
-          br.close();
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-        return null;
-     }
+      }
+      br.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
 }
+  
