@@ -18,7 +18,7 @@ public class Student {
 
   public String GetName() {return Name;}
   public int GetAge() {return Age;}
-  public String GetSurname() {return Surname;}
+  public String getSurname() {return Surname;}
   public int GetDatad() {return Datad;}
   public int GetDatam() {return Datam;}
   public int GetDatar() {return Datar;}

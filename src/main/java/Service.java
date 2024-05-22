@@ -5,6 +5,8 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
+import java.util.List;
 public class Service {
 
   public void addStudent(Student student) throws IOException {
@@ -35,17 +37,20 @@ public class Service {
   }
 
   public Student findStudentByName(String surname) {
-    /*Scanner scanner = new Scanner(System.in);
-    new FileReader("db.txt");
-    while(scanner.hasNextLine()){
-         if(surname.equals(scanner.nextLine().trim())){
-            System.out.println(scanner.nextLine());
-            break;
-          }else{
-           System.out.println("Nie ma takiego studenta");
-
+        try {
+          FileReader file = new FileReader("db.txt");
+          BufferedReader br = new BufferedReader(file);
+          String line;
+          while ((line = br.readLine()) != null) {
+              Student student = Student.Parse(line);
+              if (student.getSurname().equalsIgnoreCase(surname)) {
+                  return student;
+              }
           }
-     }*/
-    return null;
-  }
+          br.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+        return null;
+     }
 }
